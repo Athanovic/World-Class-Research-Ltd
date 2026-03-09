@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
+import logo from '../assets/logo.png';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,15 +19,17 @@ const Navigation = () => {
     { name: 'Home', href: '#' },
     { name: 'About', href: '#about' },
     { name: 'Services', href: '#services' },
+    { name: 'Our Work', href: '#our-work' },
     { name: 'Coverage', href: '#coverage' },
+    { name: 'Compliance', href: '#compliance' },
     { name: 'Team', href: '#team' },
     { name: 'Insights', href: '#insights' },
     { name: 'Careers', href: '#careers' }
   ];
 
   const navClass = isScrolled 
-    ? 'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg' 
-    : 'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent';
+  ? 'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-lg border-b-4 border-white' 
+  : 'fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-transparent border-b-4 border-white';
 
   const linkClass = isScrolled
     ? 'font-medium transition-colors hover:text-primary-600 text-gray-700'
@@ -48,11 +51,11 @@ const Navigation = () => {
             transition={{ duration: 0.5 }}
           >
             <a href="#" className="flex items-center gap-2">
-              <div className="text-2xl font-bold">
-                <span className="bg-gradient-to-r from-primary-600 to-accent-600 bg-clip-text text-transparent">
-                  WCRL
-                </span>
-              </div>
+              <img 
+                src={logo} 
+                alt="World-Class Research Logo" 
+                className="h-12 w-auto"
+              />
             </a>
           </motion.div>
 

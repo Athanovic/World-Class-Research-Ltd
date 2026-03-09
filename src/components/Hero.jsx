@@ -1,14 +1,14 @@
 import React from 'react';
-import { ArrowRight, Sparkles, TrendingUp, Globe } from 'lucide-react';
+import { ArrowRight, Globe, TrendingUp, Sparkles } from 'lucide-react';
 import { motion } from 'framer-motion';
 
 const Hero = () => {
   return (
-    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500">
+    <div className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-primary-800">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
-          className="absolute top-20 left-10 w-72 h-72 bg-yellow-400/30 rounded-full blur-3xl"
+          className="absolute top-20 left-10 w-72 h-72 bg-primary-400/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.3, 1],
             opacity: [0.3, 0.6, 0.3],
@@ -22,7 +22,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute top-40 right-20 w-96 h-96 bg-cyan-400/30 rounded-full blur-3xl"
+          className="absolute top-40 right-20 w-96 h-96 bg-primary-300/20 rounded-full blur-3xl"
           animate={{
             scale: [1.2, 1, 1.2],
             opacity: [0.2, 0.5, 0.2],
@@ -36,7 +36,7 @@ const Hero = () => {
           }}
         />
         <motion.div
-          className="absolute bottom-20 left-1/3 w-80 h-80 bg-rose-400/30 rounded-full blur-3xl"
+          className="absolute bottom-20 left-1/3 w-80 h-80 bg-primary-500/20 rounded-full blur-3xl"
           animate={{
             scale: [1, 1.4, 1],
             opacity: [0.3, 0.5, 0.3],
@@ -79,17 +79,6 @@ const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          {/* Badge */}
-          <motion.div
-            className="inline-flex items-center gap-2 bg-white/20 backdrop-blur-md border border-white/30 px-6 py-3 rounded-full mb-8"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-          >
-            <Sparkles className="w-5 h-5 text-yellow-300" />
-            <span className="text-white font-semibold">AI-Enhanced Research Solutions</span>
-          </motion.div>
-
           <motion.h1 
             className="text-5xl md:text-7xl lg:text-8xl font-bold text-white mb-6 leading-tight"
             initial={{ opacity: 0, y: 20 }}
@@ -97,7 +86,7 @@ const Hero = () => {
             transition={{ duration: 0.8, delay: 0.3 }}
           >
             <span className="block">World-Class</span>
-            <span className="block bg-gradient-to-r from-yellow-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">
+            <span className="block text-white">
               Research Limited
             </span>
           </motion.h1>
@@ -150,11 +139,10 @@ const Hero = () => {
           >
             <a 
               href="#contact"
-              className="group relative overflow-hidden bg-white text-purple-700 px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-purple-500/50 transition-all duration-300 flex items-center gap-3"
+              className="group relative overflow-hidden bg-white text-primary-700 px-10 py-5 rounded-2xl font-bold text-lg shadow-2xl hover:shadow-white/50 transition-all duration-300 flex items-center gap-3"
             >
               <span className="relative z-10">Get Started</span>
               <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-2 transition-transform" />
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400 to-pink-400 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
             </a>
           </motion.div>
         </motion.div>
